@@ -1,0 +1,20 @@
+{% extends 'agency/base.html' %}
+
+{% block title %}Home - Travel Agency{% endblock %}
+
+{% block content %}
+    <h2>Welcome to our Travel Agency!</h2>
+    <p>Find the best tours around the world.</p>
+
+    <div style="border: 1px solid black; padding: 10px; margin-top: 20px;">
+        <h3>Latest News</h3>
+        {% if latest_article %}
+            <h4>{{ latest_article.title }}</h4>
+            <p><i>{{ latest_article.summary }}</i></p>
+            <p>Published: {{ latest_article.created_at|date:"d/m/Y" }}</p>
+            <a href="{% url 'agency:news_detail' latest_article.id %}">Read more...</a>
+        {% else %}
+            <p>No news published yet.</p>
+        {% endif %}
+    </div>
+{% endblock %}

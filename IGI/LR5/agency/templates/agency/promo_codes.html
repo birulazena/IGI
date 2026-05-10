@@ -1,0 +1,20 @@
+{% extends 'agency/base.html' %}
+{% block title %}Promo Codes{% endblock %}
+
+{% block content %}
+    <h2>Promo Codes & Coupons</h2>
+    <ul>
+        {% for promo in promos %}
+            <li>
+                <strong>{{ promo.code }}</strong> - {{ promo.discount_percentage }}% off
+                {% if promo.is_active %}
+                    (Active)
+                {% else %}
+                    (Archived)
+                {% endif %}
+            </li>
+        {% empty %}
+            <li>No promo codes available.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

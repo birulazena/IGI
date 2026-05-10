@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Concurrency Demo - Variant 4</title>
+</head>
+<body>
+    <h1>Parallelism & Concurrency (Extra Task)</h1>
+    <p><a href="{% url 'agency:home' %}">Back to Main Site</a></p>
+    <hr>
+
+    <h2>Task A: Threading (Download 5 Articles)</h2>
+    <p><strong>Mechanics:</strong> Used <code>threading.Lock()</code> to synchronize appending to a shared array.</p>
+    <p>Articles Downloaded: {{ articles_downloaded }}</p>
+    <p>Time Taken: <strong>{{ time_a }} seconds</strong></p>
+
+    <hr>
+
+    <h2>Task B: Multiprocessing (Word Frequency Count)</h2>
+    <p><strong>Mechanics:</strong> Split massive downloaded texts across CPU cores using <code>multiprocessing.Pool</code> to justify creation overhead.</p>
+    <ul>
+        {% for word, count in top_words %}
+            <li>"{{ word }}": {{ count }}</li>
+        {% endfor %}
+    </ul>
+    <p>Time Taken: <strong>{{ time_b }} seconds</strong></p>
+
+    <hr>
+
+    <h2>Task C: Asyncio (20 HTTP Status Checks)</h2>
+    <p><strong>Mechanics:</strong> Concurrent non-blocking network requests using <code>aiohttp</code>.</p>
+    <ul>
+        {% for url, status in async_results %}
+            <li>{{ url }} - {% if status %}200 OK{% else %}Failed{% endif %}</li>
+        {% endfor %}
+    </ul>
+    <p>Time Taken: <strong>{{ time_c }} seconds</strong></p>
+
+</body>
+</html>

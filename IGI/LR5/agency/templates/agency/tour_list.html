@@ -1,0 +1,41 @@
+{% extends 'agency/base.html' %}
+{% block title %}Tours Catalog{% endblock %}
+
+{% block content %}
+    <h2>Tours Catalog</h2>
+
+    <fieldset style="margin-bottom: 20px; padding: 10px;">
+        <legend>Filter Tours</legend>
+        <form method="get">
+            <label>Country: <input type="text" name="country" value="{{ request.GET.country }}"></label>
+            <label>Max Price: <input type="number" name="max_price" value="{{ request.GET.max_price }}"></label>
+            <label>Hotel Stars:
+                <select name="stars">
+                    <option value="">Any</option>
+                    <option value="3" {% if request.GET.stars == '3' %}selected{% endif %}>3 Stars</option>
+                    <option value="4" {% if request.GET.stars == '4' %}selected{% endif %}>4 Stars</option>
+                    <option value="5" {% if request.GET.stars == '5' %}selected{% endif %}>5 Stars</option>
+                </select>
+            </label>
+            <button type="submit">Apply Filters</button>
+            <a href="{% url 'agency:tours' %}"><button type="button">Clear</button></a>
+        </form>
+    </fieldset>
+
+    <ul>
+        {% for tour in tours %}
+            <li style="margin-bottom: 15px;">
+                <strong>{{ tour.title }}</strong><br>
+                Hotel: {{ tour.hotel.name }} ({{ tour.hotel.stars }} Stars) - {{ tour.hotel.country.name }}<br>
+                Duration: {{ tour.get_duration_weeks_display }}<br>
+                Price: <strong>{{ tour.price }} BYN</strong><br>
+
+                {% if user.is_authenticated and user.profile.role == 'client' %}
+                    <a href="{% url 'agency:book_tour' tour.id %}"><button>Book this Tour</button></a>
+                {% endif %}
+            </li>
+        {% empty %}
+            <li>No tours found matching your criteria.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

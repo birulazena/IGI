@@ -1,0 +1,16 @@
+{% extends 'agency/base.html' %}
+{% block title %}Vacancies{% endblock %}
+
+{% block content %}
+    <h2>Job Vacancies</h2>
+    <ul>
+        {% for vacancy in vacancies %}
+            <li>
+                <strong>{{ vacancy.title }}</strong><br>
+                <p>{{ vacancy.description }}</p>
+            </li>
+        {% empty %}
+            <li>No vacancies at the moment.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

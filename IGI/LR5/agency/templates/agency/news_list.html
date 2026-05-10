@@ -1,0 +1,21 @@
+{% extends 'agency/base.html' %}
+{% block title %}News{% endblock %}
+
+{% block content %}
+    <h2>Latest News</h2>
+    <ul>
+        {% for article in articles %}
+            <li style="margin-bottom: 20px;">
+                {% if article.image_url %}
+                    <img src="{{ article.image_url }}" alt="News Image" width="150"><br>
+                {% endif %}
+                <strong>{{ article.title }}</strong><br>
+                <i>{{ article.summary }}</i><br>
+                <small>{{ article.created_at|date:"d/m/Y" }}</small><br>
+                <a href="{% url 'agency:news_detail' article.id %}"><button>Read More</button></a>
+            </li>
+        {% empty %}
+            <li>No news available right now.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'agency/base.html' %}
+{% block title %}Contacts{% endblock %}
+
+{% block content %}
+    <h2>Our Team</h2>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Photo</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Phone</th>
+            <th>Email</th>
+        </tr>
+        {% for employee in employees %}
+            <tr>
+                <td>
+                    {% if employee.photo_url %}
+                        <img src="{{ employee.photo_url }}" width="100" alt="Photo">
+                    {% else %}
+                        No photo
+                    {% endif %}
+                </td>
+                <td>{{ employee.full_name }}</td>
+                <td>{{ employee.job_description }}</td>
+                <td>{{ employee.phone }}</td>
+                <td>{{ employee.email }}</td>
+            </tr>
+        {% empty %}
+            <tr><td colspan="5">No contacts added yet.</td></tr>
+        {% endfor %}
+    </table>
+{% endblock %}

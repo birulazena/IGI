@@ -1,0 +1,1109 @@
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 493
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 493
+Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 145, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 229, in get
+    context = self.get_context_data(**kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py", line 182, in get_context_data
+    context['profile'] = self.request.user.profile
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\utils\functional.py", line 253, in inner
+    return func(_wrapped, *args)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 520, in __get__
+    raise self.RelatedObjectDoesNotExist(
+    ...<2 lines>...
+    )
+django.contrib.auth.models.User.profile.RelatedObjectDoesNotExist: User has no profile.
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 493
+Internal Server Error: /dashboard/statistics/
+Traceback (most recent call last):
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 136, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 145, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 229, in get
+    context = self.get_context_data(**kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py", line 159, in get_context_data
+    context['client_stats'] = Profile.objects.filter(role='client').annotate(
+                              ^^^^^^^
+NameError: name 'Profile' is not defined
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 493
+Internal Server Error: /dashboard/statistics/
+Traceback (most recent call last):
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 136, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 145, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 229, in get
+    context = self.get_context_data(**kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py", line 159, in get_context_data
+    context['client_stats'] = Profile.objects.filter(role='client').annotate(
+                              ^^^^^^^
+NameError: name 'Profile' is not defined
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 493
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 493
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 493
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 493
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 493
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 493
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 493
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 493
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 493
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 493
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 493
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 493
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 493
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 498
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 514
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 492
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 492
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 492
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 492
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 492
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 492
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 492
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 492
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 492
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 492
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 492
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 492
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 492
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 492
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 492
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 492
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 492
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 494
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 494
+Client 'Maxim' created a new order for Tour ID: 1.
+Starting new HTTPS connection (1): api.nbrb.by:443
+https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+Starting new HTTPS connection (1): api.openweathermap.org:443
+https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 494
+C:\Áãóèð\453501\IGI\IGI\LR5\TravelAgency\settings.py changed, reloading.
+[INFO] 2026-05-06 00:54:00,752 | autoreload | Watching for file changes with StatReloader
+[INFO] 2026-05-06 00:54:05,124 | autoreload | C:\Áãóèð\453501\IGI\IGI\LR5\TravelAgency\settings.py changed, reloading.
+[INFO] 2026-05-06 00:54:05,600 | autoreload | Watching for file changes with StatReloader
+[INFO] 2026-05-06 00:54:06,949 | autoreload | C:\Áãóèð\453501\IGI\IGI\LR5\TravelAgency\settings.py changed, reloading.
+[INFO] 2026-05-06 00:54:07,441 | autoreload | Watching for file changes with StatReloader
+[DEBUG] 2026-05-06 00:54:13,730 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-06 00:54:14,110 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-06 00:54:14,113 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-06 00:54:14,515 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 494
+[DEBUG] 2026-05-06 00:54:22,109 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-06 00:54:22,491 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-06 00:54:22,494 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-06 00:54:22,990 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 494
+[INFO] 2026-05-06 00:54:26,990 | views | Client 'Maxim' created a new order for Tour ID: 2.
+[DEBUG] 2026-05-06 00:54:27,013 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-06 00:54:27,400 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-06 00:54:27,403 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-06 00:54:27,787 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 494
+[ERROR] 2026-05-06 17:13:28,803 | weather_service | Weather API configuration is missing in environment variables
+[ERROR] 2026-05-06 17:13:28,809 | weather_service | Failed to fetch weather for Minsk: Connection error
+[ERROR] 2026-05-06 17:13:28,813 | currency_service | Failed to fetch currency rate: NBRB API Down
+[WARNING] 2026-05-06 17:19:20,014 | log | Forbidden (Permission denied): /dashboard/client/
+Traceback (most recent call last):
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 135, in dispatch
+    return self.handle_no_permission()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 49, in handle_no_permission
+    raise PermissionDenied(self.get_permission_denied_message())
+django.core.exceptions.PermissionDenied
+[WARNING] 2026-05-06 17:19:20,418 | log | Forbidden (Permission denied): /dashboard/employee/
+Traceback (most recent call last):
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 135, in dispatch
+    return self.handle_no_permission()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 49, in handle_no_permission
+    raise PermissionDenied(self.get_permission_denied_message())
+django.core.exceptions.PermissionDenied
+[WARNING] 2026-05-06 17:19:20,421 | log | Forbidden (Permission denied): /dashboard/statistics/
+Traceback (most recent call last):
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 135, in dispatch
+    return self.handle_no_permission()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 49, in handle_no_permission
+    raise PermissionDenied(self.get_permission_denied_message())
+django.core.exceptions.PermissionDenied
+[INFO] 2026-05-06 17:19:22,168 | views | Client 'client1' created a new order for Tour ID: 9.
+[INFO] 2026-05-06 17:19:22,519 | views | Employee 'emp1' accepted Order ID: 6.
+[ERROR] 2026-05-06 17:19:26,581 | weather_service | Weather API configuration is missing in environment variables
+[ERROR] 2026-05-06 17:19:26,586 | weather_service | Failed to fetch weather for Minsk: Connection error
+[ERROR] 2026-05-06 17:19:26,590 | currency_service | Failed to fetch currency rate: NBRB API Down
+[WARNING] 2026-05-06 17:28:01,845 | log | Forbidden (Permission denied): /dashboard/client/
+Traceback (most recent call last):
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 135, in dispatch
+    return self.handle_no_permission()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 49, in handle_no_permission
+    raise PermissionDenied(self.get_permission_denied_message())
+django.core.exceptions.PermissionDenied
+[WARNING] 2026-05-06 17:28:02,186 | log | Forbidden (Permission denied): /dashboard/employee/
+Traceback (most recent call last):
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 135, in dispatch
+    return self.handle_no_permission()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 49, in handle_no_permission
+    raise PermissionDenied(self.get_permission_denied_message())
+django.core.exceptions.PermissionDenied
+[WARNING] 2026-05-06 17:28:02,190 | log | Forbidden (Permission denied): /dashboard/statistics/
+Traceback (most recent call last):
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 135, in dispatch
+    return self.handle_no_permission()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 49, in handle_no_permission
+    raise PermissionDenied(self.get_permission_denied_message())
+django.core.exceptions.PermissionDenied
+[INFO] 2026-05-06 17:28:03,902 | views | Client 'client1' created a new order for Tour ID: 9.
+[INFO] 2026-05-06 17:28:04,246 | views | Employee 'emp1' accepted Order ID: 6.
+[INFO] 2026-05-06 17:28:06,628 | views | New user registered: new_direct_client as client.
+[ERROR] 2026-05-06 17:28:12,078 | weather_service | Weather API configuration is missing in environment variables
+[ERROR] 2026-05-06 17:28:12,083 | weather_service | Failed to fetch weather for Minsk: Connection error
+[ERROR] 2026-05-06 17:28:12,086 | currency_service | Failed to fetch currency rate: NBRB API Down
+[WARNING] 2026-05-06 17:34:04,264 | log | Forbidden (Permission denied): /dashboard/client/
+Traceback (most recent call last):
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 135, in dispatch
+    return self.handle_no_permission()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 49, in handle_no_permission
+    raise PermissionDenied(self.get_permission_denied_message())
+django.core.exceptions.PermissionDenied
+[WARNING] 2026-05-06 17:34:04,616 | log | Forbidden (Permission denied): /dashboard/employee/
+Traceback (most recent call last):
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 135, in dispatch
+    return self.handle_no_permission()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 49, in handle_no_permission
+    raise PermissionDenied(self.get_permission_denied_message())
+django.core.exceptions.PermissionDenied
+[WARNING] 2026-05-06 17:34:04,619 | log | Forbidden (Permission denied): /dashboard/statistics/
+Traceback (most recent call last):
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 135, in dispatch
+    return self.handle_no_permission()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 49, in handle_no_permission
+    raise PermissionDenied(self.get_permission_denied_message())
+django.core.exceptions.PermissionDenied
+[INFO] 2026-05-06 17:34:06,327 | views | Client 'client1' created a new order for Tour ID: 9.
+[INFO] 2026-05-06 17:34:06,681 | views | Employee 'emp1' accepted Order ID: 6.
+[INFO] 2026-05-06 17:34:09,053 | views | New user registered: new_direct_client as client.
+[ERROR] 2026-05-06 17:34:14,461 | weather_service | Weather API configuration is missing in environment variables
+[ERROR] 2026-05-06 17:34:14,465 | weather_service | Failed to fetch weather for Minsk: Connection error
+[ERROR] 2026-05-06 17:34:14,468 | currency_service | Failed to fetch currency rate: NBRB API Down
+[WARNING] 2026-05-06 17:47:50,053 | log | Forbidden (Permission denied): /dashboard/client/
+Traceback (most recent call last):
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 135, in dispatch
+    return self.handle_no_permission()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 49, in handle_no_permission
+    raise PermissionDenied(self.get_permission_denied_message())
+django.core.exceptions.PermissionDenied
+[WARNING] 2026-05-06 17:47:50,404 | log | Forbidden (Permission denied): /dashboard/employee/
+Traceback (most recent call last):
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 135, in dispatch
+    return self.handle_no_permission()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 49, in handle_no_permission
+    raise PermissionDenied(self.get_permission_denied_message())
+django.core.exceptions.PermissionDenied
+[WARNING] 2026-05-06 17:47:50,407 | log | Forbidden (Permission denied): /dashboard/statistics/
+Traceback (most recent call last):
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 135, in dispatch
+    return self.handle_no_permission()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\contrib\auth\mixins.py", line 49, in handle_no_permission
+    raise PermissionDenied(self.get_permission_denied_message())
+django.core.exceptions.PermissionDenied
+[INFO] 2026-05-06 17:47:52,194 | views | Client 'client1' created a new order for Tour ID: 9.
+[INFO] 2026-05-06 17:47:52,543 | views | Employee 'emp1' accepted Order ID: 6.
+[INFO] 2026-05-06 17:47:54,937 | views | New user registered: new_direct_client as client.
+[ERROR] 2026-05-06 17:48:00,376 | weather_service | Weather API configuration is missing in environment variables
+[ERROR] 2026-05-06 17:48:00,379 | weather_service | Failed to fetch weather for Minsk: Connection error
+[ERROR] 2026-05-06 17:48:00,383 | currency_service | Failed to fetch currency rate: NBRB API Down
+[INFO] 2026-05-08 20:28:52,397 | autoreload | Watching for file changes with StatReloader
+[INFO] 2026-05-08 20:30:07,847 | autoreload | Watching for file changes with StatReloader
+[DEBUG] 2026-05-08 20:30:12,628 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 20:30:13,089 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 20:30:13,094 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 20:30:13,653 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 491
+[DEBUG] 2026-05-08 20:30:23,351 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 20:30:23,709 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 20:30:23,712 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 20:30:24,196 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 491
+[DEBUG] 2026-05-08 20:30:25,883 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 20:30:26,263 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 20:30:26,266 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 20:30:26,794 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 491
+[DEBUG] 2026-05-08 20:30:33,064 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 20:30:33,433 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 20:30:33,435 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 20:30:33,903 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 491
+[DEBUG] 2026-05-08 20:30:38,448 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 20:30:38,770 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 20:30:38,773 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 20:30:39,177 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 491
+[INFO] 2026-05-08 21:13:01,035 | autoreload | Watching for file changes with StatReloader
+[DEBUG] 2026-05-08 21:13:08,993 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 21:13:09,356 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 21:13:09,359 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 21:13:09,808 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 491
+[DEBUG] 2026-05-08 21:13:17,097 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 21:13:18,665 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 21:13:18,667 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 21:13:19,120 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 491
+[DEBUG] 2026-05-08 21:13:19,125 | connectionpool | Starting new HTTPS connection (1): en.wikipedia.org:443
+[DEBUG] 2026-05-08 21:13:19,126 | connectionpool | Starting new HTTPS connection (1): en.wikipedia.org:443
+[DEBUG] 2026-05-08 21:13:19,127 | connectionpool | Starting new HTTPS connection (1): en.wikipedia.org:443
+[DEBUG] 2026-05-08 21:13:19,128 | connectionpool | Starting new HTTPS connection (1): en.wikipedia.org:443
+[DEBUG] 2026-05-08 21:13:19,128 | connectionpool | Starting new HTTPS connection (1): en.wikipedia.org:443
+[DEBUG] 2026-05-08 21:13:19,872 | connectionpool | https://en.wikipedia.org:443 "GET /wiki/Multithreading_(computer_architecture) HTTP/1.1" 403 126
+[DEBUG] 2026-05-08 21:13:19,872 | connectionpool | https://en.wikipedia.org:443 "GET /wiki/Concurrency_(computer_science) HTTP/1.1" 403 126
+[DEBUG] 2026-05-08 21:13:19,878 | connectionpool | https://en.wikipedia.org:443 "GET /wiki/Asynchronous_I/O HTTP/1.1" 403 126
+[DEBUG] 2026-05-08 21:13:19,879 | connectionpool | https://en.wikipedia.org:443 "GET /wiki/Python_(programming_language) HTTP/1.1" 403 126
+[DEBUG] 2026-05-08 21:13:19,899 | connectionpool | https://en.wikipedia.org:443 "GET /wiki/Django_(web_framework) HTTP/1.1" 403 126
+[DEBUG] 2026-05-08 21:13:19,902 | proactor_events | Using proactor: IocpProactor
+[INFO] 2026-05-08 21:21:57,651 | autoreload | C:\Áãóèð\453501\IGI\IGI\LR5\agency\service\concurrency_service.py changed, reloading.
+[INFO] 2026-05-08 21:21:58,237 | autoreload | Watching for file changes with StatReloader
+[INFO] 2026-05-08 21:21:59,778 | autoreload | C:\Áãóèð\453501\IGI\IGI\LR5\agency\service\concurrency_service.py changed, reloading.
+[INFO] 2026-05-08 21:22:00,415 | autoreload | Watching for file changes with StatReloader
+[DEBUG] 2026-05-08 21:22:15,342 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 21:22:15,783 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 21:22:15,786 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 21:22:16,179 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 491
+[DEBUG] 2026-05-08 21:22:18,028 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 21:22:19,008 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 21:22:19,011 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 21:22:19,742 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 491
+[DEBUG] 2026-05-08 21:22:19,748 | connectionpool | Starting new HTTPS connection (1): en.wikipedia.org:443
+[DEBUG] 2026-05-08 21:22:19,748 | connectionpool | Starting new HTTPS connection (1): en.wikipedia.org:443
+[DEBUG] 2026-05-08 21:22:19,750 | connectionpool | Starting new HTTPS connection (1): en.wikipedia.org:443
+[DEBUG] 2026-05-08 21:22:19,751 | connectionpool | Starting new HTTPS connection (1): en.wikipedia.org:443
+[DEBUG] 2026-05-08 21:22:19,751 | connectionpool | Starting new HTTPS connection (1): en.wikipedia.org:443
+[DEBUG] 2026-05-08 21:22:20,542 | connectionpool | https://en.wikipedia.org:443 "GET /wiki/Python_(programming_language) HTTP/1.1" 403 2075
+[DEBUG] 2026-05-08 21:22:20,568 | connectionpool | https://en.wikipedia.org:443 "GET /wiki/Asynchronous_I/O HTTP/1.1" 200 28889
+[DEBUG] 2026-05-08 21:22:20,576 | connectionpool | https://en.wikipedia.org:443 "GET /wiki/Concurrency_(computer_science) HTTP/1.1" 200 29050
+[DEBUG] 2026-05-08 21:22:20,583 | connectionpool | https://en.wikipedia.org:443 "GET /wiki/Multithreading_(computer_architecture) HTTP/1.1" 200 36382
+[DEBUG] 2026-05-08 21:22:20,616 | connectionpool | https://en.wikipedia.org:443 "GET /wiki/Django_(web_framework) HTTP/1.1" 200 50263
+[DEBUG] 2026-05-08 21:22:22,582 | proactor_events | Using proactor: IocpProactor
+[DEBUG] 2026-05-08 21:28:12,301 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 21:28:12,734 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 21:28:12,737 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 21:28:13,232 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 491
+[DEBUG] 2026-05-08 21:28:15,250 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 21:28:15,662 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 21:28:15,665 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 21:28:16,147 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 491
+[DEBUG] 2026-05-08 21:28:16,151 | connectionpool | Starting new HTTPS connection (1): en.wikipedia.org:443
+[DEBUG] 2026-05-08 21:28:16,151 | connectionpool | Starting new HTTPS connection (1): en.wikipedia.org:443
+[DEBUG] 2026-05-08 21:28:16,153 | connectionpool | Starting new HTTPS connection (1): en.wikipedia.org:443
+[DEBUG] 2026-05-08 21:28:16,154 | connectionpool | Starting new HTTPS connection (1): en.wikipedia.org:443
+[DEBUG] 2026-05-08 21:28:16,154 | connectionpool | Starting new HTTPS connection (1): en.wikipedia.org:443
+[DEBUG] 2026-05-08 21:28:16,895 | connectionpool | https://en.wikipedia.org:443 "GET /wiki/Asynchronous_I/O HTTP/1.1" 200 28889
+[DEBUG] 2026-05-08 21:28:16,911 | connectionpool | https://en.wikipedia.org:443 "GET /wiki/Concurrency_(computer_science) HTTP/1.1" 200 29050
+[DEBUG] 2026-05-08 21:28:16,915 | connectionpool | https://en.wikipedia.org:443 "GET /wiki/Multithreading_(computer_architecture) HTTP/1.1" 200 36382
+[DEBUG] 2026-05-08 21:28:16,917 | connectionpool | https://en.wikipedia.org:443 "GET /wiki/Django_(web_framework) HTTP/1.1" 200 50263
+[DEBUG] 2026-05-08 21:28:16,919 | connectionpool | https://en.wikipedia.org:443 "GET /wiki/Python_(programming_language) HTTP/1.1" 403 2074
+[DEBUG] 2026-05-08 21:28:18,570 | proactor_events | Using proactor: IocpProactor
+[INFO] 2026-05-08 21:29:48,281 | autoreload | C:\Áãóèð\453501\IGI\IGI\LR5\agency\service\concurrency_service.py changed, reloading.
+[INFO] 2026-05-08 21:29:48,890 | autoreload | Watching for file changes with StatReloader
+[INFO] 2026-05-08 21:30:00,550 | autoreload | C:\Áãóèð\453501\IGI\IGI\LR5\agency\service\concurrency_service.py changed, reloading.
+[INFO] 2026-05-08 21:30:01,064 | autoreload | Watching for file changes with StatReloader
+[DEBUG] 2026-05-08 21:30:14,831 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 21:30:15,263 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 21:30:15,268 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 21:30:15,655 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 491
+[DEBUG] 2026-05-08 21:30:15,660 | connectionpool | Starting new HTTPS connection (1): docs.python.org:443
+[DEBUG] 2026-05-08 21:30:15,661 | connectionpool | Starting new HTTPS connection (1): docs.djangoproject.com:443
+[DEBUG] 2026-05-08 21:30:15,660 | connectionpool | Starting new HTTPS connection (1): en.wikipedia.org:443
+[DEBUG] 2026-05-08 21:30:15,661 | connectionpool | Starting new HTTPS connection (1): peps.python.org:443
+[DEBUG] 2026-05-08 21:30:15,662 | connectionpool | Starting new HTTPS connection (1): developer.mozilla.org:443
+[DEBUG] 2026-05-08 21:30:16,422 | connectionpool | https://en.wikipedia.org:443 "GET /wiki/Concurrency_(computer_science) HTTP/1.1" 200 29050
+[DEBUG] 2026-05-08 21:30:16,436 | connectionpool | https://docs.djangoproject.com:443 "GET /en/5.0/intro/tutorial01/ HTTP/1.1" 200 12452
+[DEBUG] 2026-05-08 21:30:16,443 | connectionpool | https://peps.python.org:443 "GET /pep-0008/ HTTP/1.1" 200 25140
+[DEBUG] 2026-05-08 21:30:16,445 | connectionpool | https://developer.mozilla.org:443 "GET /en-US/docs/Web/HTTP/Overview HTTP/1.1" 301 70
+[DEBUG] 2026-05-08 21:30:16,455 | connectionpool | https://docs.python.org:443 "GET /3/tutorial/index.html HTTP/1.1" 200 7710
+[DEBUG] 2026-05-08 21:30:16,680 | connectionpool | https://developer.mozilla.org:443 "GET /en-US/docs/Web/HTTP/Guides/Overview HTTP/1.1" 200 31565
+[DEBUG] 2026-05-08 21:30:17,953 | proactor_events | Using proactor: IocpProactor
+[DEBUG] 2026-05-08 21:37:29,950 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 21:37:30,295 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 21:37:30,299 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 21:37:30,693 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 482
+[DEBUG] 2026-05-08 21:37:37,253 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 21:37:37,597 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 21:37:37,600 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 21:37:38,049 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 482
+[DEBUG] 2026-05-08 21:47:19,813 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 21:47:20,331 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 21:47:20,335 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 21:47:20,893 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 482
+[DEBUG] 2026-05-08 21:47:27,701 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 21:47:28,184 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 21:47:28,187 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 21:47:28,811 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 482
+[DEBUG] 2026-05-08 21:47:33,527 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 21:47:34,076 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 21:47:34,079 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 21:47:34,624 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 482
+[DEBUG] 2026-05-08 21:47:37,998 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 21:47:38,539 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 21:47:38,542 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 21:47:39,081 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 482
+[DEBUG] 2026-05-08 21:47:44,364 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 21:47:46,079 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 21:47:46,085 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 21:47:47,132 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 482
+[DEBUG] 2026-05-08 21:55:46,925 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 21:55:48,143 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 21:55:48,147 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 21:55:48,811 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 482
+[DEBUG] 2026-05-08 21:56:12,409 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 21:56:12,885 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 21:56:12,890 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 21:56:13,452 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 482
+[DEBUG] 2026-05-08 21:56:17,052 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 21:56:17,511 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 21:56:17,516 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 21:56:18,049 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 482
+[DEBUG] 2026-05-08 21:56:25,618 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 21:56:26,160 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 21:56:26,165 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 21:56:26,693 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 482
+[DEBUG] 2026-05-08 21:56:29,663 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 21:56:30,224 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 21:56:30,230 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 21:56:30,933 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 482
+[DEBUG] 2026-05-08 21:56:34,849 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 21:56:35,441 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 21:56:35,445 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 21:56:36,080 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 482
+[INFO] 2026-05-08 23:57:25,449 | autoreload | Watching for file changes with StatReloader
+[INFO] 2026-05-08 23:57:43,668 | autoreload | Watching for file changes with StatReloader
+[DEBUG] 2026-05-08 23:57:49,777 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-08 23:57:50,548 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-08 23:57:50,555 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-08 23:57:51,359 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 490
+[ERROR] 2026-05-08 23:57:51,724 | log | Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 359, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: agency_newsarticle
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 145, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 229, in get
+    context = self.get_context_data(**kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py", line 53, in get_context_data
+    context['latest_article'] = NewsArticle.objects.order_by('-created_at').first()
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\models\query.py", line 1145, in first
+    for obj in queryset[:1]:
+               ~~~~~~~~^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\models\query.py", line 390, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\models\query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\models\query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1624, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 359, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: agency_newsarticle
+[INFO] 2026-05-09 00:03:58,444 | autoreload | C:\Áãóèð\453501\IGI\IGI\LR5\TravelAgency\settings.py changed, reloading.
+[INFO] 2026-05-09 00:03:59,184 | autoreload | Watching for file changes with StatReloader
+[INFO] 2026-05-09 00:04:04,099 | autoreload | C:\Áãóèð\453501\IGI\IGI\LR5\TravelAgency\settings.py changed, reloading.
+[INFO] 2026-05-09 00:04:05,352 | autoreload | Watching for file changes with StatReloader
+[INFO] 2026-05-09 00:04:53,904 | autoreload | C:\Áãóèð\453501\IGI\IGI\LR5\TravelAgency\settings.py changed, reloading.
+[INFO] 2026-05-09 00:04:54,547 | autoreload | Watching for file changes with StatReloader
+[INFO] 2026-05-09 00:05:38,491 | autoreload | Watching for file changes with StatReloader
+[INFO] 2026-05-09 00:08:33,468 | autoreload | Watching for file changes with StatReloader
+[DEBUG] 2026-05-09 00:08:38,134 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-09 00:08:38,634 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-09 00:08:38,639 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-09 00:08:39,188 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 490
+[ERROR] 2026-05-09 00:08:39,255 | log | Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 359, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: agency_newsarticle
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 145, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\views\generic\base.py", line 229, in get
+    context = self.get_context_data(**kwargs)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\agency\views.py", line 53, in get_context_data
+    context['latest_article'] = NewsArticle.objects.order_by('-created_at').first()
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\models\query.py", line 1145, in first
+    for obj in queryset[:1]:
+               ~~~~~~~~^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\models\query.py", line 390, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\models\query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\models\query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1624, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Áãóèð\453501\IGI\IGI\LR5\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 359, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: agency_newsarticle
+[INFO] 2026-05-09 00:15:43,570 | autoreload | Watching for file changes with StatReloader
+[DEBUG] 2026-05-09 00:15:47,740 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-09 00:15:48,236 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-09 00:15:48,240 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-09 00:15:48,809 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 481
+[DEBUG] 2026-05-09 00:15:50,871 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-09 00:15:51,328 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-09 00:15:51,331 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-09 00:15:51,971 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 481
+[DEBUG] 2026-05-09 00:15:54,468 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-09 00:15:54,958 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-09 00:15:54,961 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-09 00:15:55,551 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 481
+[DEBUG] 2026-05-09 00:15:57,473 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-09 00:15:58,011 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-09 00:15:58,014 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-09 00:15:58,562 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 481
+[DEBUG] 2026-05-09 00:16:00,730 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-09 00:16:01,142 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-09 00:16:01,147 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-09 00:16:01,741 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 481
+[DEBUG] 2026-05-09 00:16:04,604 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-09 00:16:05,079 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-09 00:16:05,084 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-09 00:16:05,574 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 481
+[INFO] 2026-05-10 13:03:40,395 | autoreload | Watching for file changes with StatReloader
+[INFO] 2026-05-10 10:11:08,112 | autoreload | Watching for file changes with StatReloader
+[DEBUG] 2026-05-10 10:11:59,239 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-10 10:11:59,468 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-10 10:11:59,490 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-10 10:11:59,676 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 490
+[DEBUG] 2026-05-10 10:12:02,177 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-10 10:12:02,232 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-10 10:12:02,235 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-10 10:12:02,354 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 490
+[DEBUG] 2026-05-10 10:12:06,490 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-10 10:12:06,588 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-10 10:12:06,593 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-10 10:12:06,721 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 490
+[INFO] 2026-05-10 13:12:50,323 | autoreload | Watching for file changes with StatReloader
+[INFO] 2026-05-10 10:20:03,934 | autoreload | Watching for file changes with StatReloader
+[DEBUG] 2026-05-10 10:31:49,880 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-10 10:31:50,090 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-10 10:31:50,097 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-10 10:31:50,255 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 487
+[DEBUG] 2026-05-10 10:40:13,425 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-10 10:40:13,508 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-10 10:40:13,514 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-10 10:40:13,632 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 487
+[DEBUG] 2026-05-10 10:40:15,669 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-10 10:40:15,766 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-10 10:40:15,770 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-10 10:40:15,895 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 487
+[DEBUG] 2026-05-10 10:40:18,729 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-10 10:40:18,797 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-10 10:40:18,803 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-10 10:40:18,927 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 487
+[DEBUG] 2026-05-10 10:40:22,895 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-10 10:40:22,980 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-10 10:40:22,985 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-10 10:40:23,109 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 487
+[INFO] 2026-05-10 10:41:36,669 | views | New user registered: Zenya as client.
+[DEBUG] 2026-05-10 10:41:58,471 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-10 10:41:58,562 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-10 10:41:58,567 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-10 10:41:58,690 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 491
+[INFO] 2026-05-10 10:53:23,923 | autoreload | /app/agency/forms.py changed, reloading.
+[INFO] 2026-05-10 10:53:25,723 | autoreload | Watching for file changes with StatReloader
+[INFO] 2026-05-10 10:53:34,213 | autoreload | /app/agency/forms.py changed, reloading.
+[INFO] 2026-05-10 10:53:35,093 | autoreload | Watching for file changes with StatReloader
+[INFO] 2026-05-10 10:54:16,421 | autoreload | /app/agency/forms.py changed, reloading.
+[INFO] 2026-05-10 10:54:17,150 | autoreload | Watching for file changes with StatReloader
+[INFO] 2026-05-10 10:54:36,753 | autoreload | Watching for file changes with StatReloader
+[WARNING] 2026-05-10 10:54:52,918 | log | Forbidden (CSRF token from POST incorrect.): /accounts/logout/
+[WARNING] 2026-05-10 10:55:06,522 | log | Method Not Allowed (GET): /accounts/logout/
+[WARNING] 2026-05-10 10:55:20,327 | log | Method Not Allowed (GET): /accounts/logout/
+[WARNING] 2026-05-10 10:55:22,438 | log | Method Not Allowed (GET): /accounts/logout/
+[WARNING] 2026-05-10 10:55:23,986 | log | Method Not Allowed (GET): /accounts/logout/
+[WARNING] 2026-05-10 10:55:25,192 | log | Method Not Allowed (GET): /accounts/logout/
+[INFO] 2026-05-10 13:55:37,818 | autoreload | Watching for file changes with StatReloader
+[WARNING] 2026-05-10 10:55:45,186 | log | Method Not Allowed (GET): /accounts/logout/
+[WARNING] 2026-05-10 10:55:46,368 | log | Method Not Allowed (GET): /accounts/logout/
+[DEBUG] 2026-05-10 10:55:50,506 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-10 10:55:50,588 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-10 10:55:50,594 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-10 10:55:50,775 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 491
+[DEBUG] 2026-05-10 10:55:56,582 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-10 10:55:56,653 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-10 10:55:56,657 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-10 10:55:56,773 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 491
+[INFO] 2026-05-10 10:56:11,785 | autoreload | Watching for file changes with StatReloader
+[DEBUG] 2026-05-10 10:57:10,038 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-10 10:57:10,132 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-10 10:57:10,138 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-10 10:57:10,270 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 491
+[DEBUG] 2026-05-10 10:58:07,259 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-10 10:58:07,323 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-10 10:58:07,331 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-10 10:58:07,456 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 491
+[DEBUG] 2026-05-10 10:58:48,640 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-10 10:58:48,723 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-10 10:58:48,730 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-10 10:58:49,038 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 491
+[INFO] 2026-05-10 10:59:18,754 | views | New user registered: Yana as client.
+[DEBUG] 2026-05-10 10:59:21,601 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-10 10:59:21,667 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-10 10:59:21,670 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-10 10:59:21,795 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 491
+[DEBUG] 2026-05-10 10:59:29,576 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-10 10:59:29,675 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-10 10:59:29,682 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-10 10:59:29,806 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 491
+[DEBUG] 2026-05-10 10:59:34,810 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-10 10:59:34,900 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-10 10:59:34,906 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-10 10:59:35,032 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 491
+[DEBUG] 2026-05-10 10:59:38,302 | connectionpool | Starting new HTTPS connection (1): api.nbrb.by:443
+[DEBUG] 2026-05-10 10:59:38,408 | connectionpool | https://api.nbrb.by:443 "GET /exrates/rates/431 HTTP/1.1" 200 141
+[DEBUG] 2026-05-10 10:59:38,412 | connectionpool | Starting new HTTPS connection (1): api.openweathermap.org:443
+[DEBUG] 2026-05-10 10:59:38,564 | connectionpool | https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Minsk&appid=fd245bb1cd9c826a635ed52fcf02459e&units=metric&lang=en HTTP/1.1" 200 491

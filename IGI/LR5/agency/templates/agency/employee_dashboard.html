@@ -1,0 +1,66 @@
+{% extends 'agency/base.html' %}
+{% block title %}Employee Dashboard{% endblock %}
+
+{% block content %}
+    <h2>Employee Dashboard</h2>
+    <p>Hello, {{ user.first_name }}.</p>
+
+    <h3 style="color: red;">New Booking Requests (Pending)</h3>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Order ID</th>
+            <th>Client</th>
+            <th>Departure</th>
+            <th>Tours</th>
+            <th>Action</th>
+        </tr>
+        {% for order in pending_orders %}
+            <tr>
+                <td>{{ order.id }}</td>
+                <td>{{ order.client.user.get_full_name }}</td>
+                <td>{{ order.departure_date|date:"d/m/Y" }}</td>
+                <td>
+                    {% for tour in order.tours.all %}
+                        {{ tour.title }} ({{ tour.price }} BYN)<br>
+                    {% endfor %}
+                </td>
+                <td>
+                    <form method="post" action="{% url 'agency:accept_order' order.id %}">
+                        {% csrf_token %}
+                        <button type="submit">Accept & Process</button>
+                    </form>
+                </td>
+            </tr>
+        {% empty %}
+            <tr><td colspan="5">No new requests.</td></tr>
+        {% endfor %}
+    </table>
+
+    <br>
+
+    <h3 style="color: green;">My Processed Sales</h3>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Order ID</th>
+            <th>Client</th>
+            <th>Order Date</th>
+            <th>Departure</th>
+            <th>Tours</th>
+        </tr>
+        {% for order in my_sales %}
+            <tr>
+                <td>{{ order.id }}</td>
+                <td>{{ order.client.user.get_full_name }}</td>
+                <td>{{ order.order_date|date:"d/m/Y" }}</td>
+                <td>{{ order.departure_date|date:"d/m/Y" }}</td>
+                <td>
+                    {% for tour in order.tours.all %}
+                        {{ tour.title }} ({{ tour.price }} BYN)<br>
+                    {% endfor %}
+                </td>
+            </tr>
+        {% empty %}
+            <tr><td colspan="5">You have no registered sales.</td></tr>
+        {% endfor %}
+    </table>
+{% endblock %}

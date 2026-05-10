@@ -1,0 +1,29 @@
+{% extends 'agency/base.html' %}
+{% block title %}Reviews{% endblock %}
+
+{% block content %}
+    <h2>Client Reviews</h2>
+
+    {% if user.is_authenticated %}
+        <a href="{% url 'agency:add_review' %}"><button>Add a Review</button></a>
+    {% else %}
+        <p><a href="{% url 'login' %}">Login</a> to leave a review.</p>
+    {% endif %}
+    <br><br>
+
+    <ul>
+        {% for review in reviews %}
+            <li style="margin-bottom: 15px;">
+                <strong>{{ review.client_name }}</strong> - {{ review.rating }}/5 stars<br>
+                <i>{{ review.date_posted|date:"d/m/Y" }}</i><br>
+                <p>{{ review.text }}</p>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'agency:edit_review' review.id %}">[Edit]</a>
+                    <a href="{% url 'agency:delete_review' review.id %}">[Delete]</a>
+                {% endif %}
+            </li>
+        {% empty %}
+            <li>No reviews yet.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

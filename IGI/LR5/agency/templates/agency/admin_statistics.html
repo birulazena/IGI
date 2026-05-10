@@ -1,0 +1,56 @@
+{% extends 'agency/base.html' %}
+{% block title %}Admin Statistics{% endblock %}
+
+{% block content %}
+    <h2>Superuser Dashboard</h2>
+
+    <div style="width: 600px; margin-bottom: 30px;">
+        <canvas id="salesChart"></canvas>
+    </div>
+
+    <h3>Clients & Tour Bookings</h3>
+    <table border="1" cellpadding="5">
+        <tr><th>Client</th><th>Tours Booked</th><th>Total Spent (BYN)</th></tr>
+        {% for stat in client_stats %}
+            <tr>
+                <td>{{ stat.user.get_full_name }}</td>
+                <td>{{ stat.tours_count }}</td>
+                <td>{{ stat.total_spent|default:"0" }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <h3>Hotels by Country Catalog</h3>
+    <table border="1" cellpadding="5">
+        <tr><th>Hotel</th><th>Stars</th><th>Country</th><th>Summer Climate</th><th>Winter Climate</th><th>Price</th></tr>
+        {% for tour in hotels %}
+            <tr>
+                <td>{{ tour.hotel.name }}</td>
+                <td>{{ tour.hotel.stars }}</td>
+                <td>{{ tour.hotel.country.name }}</td>
+                <td>{{ tour.hotel.country.climate_summer }}</td>
+                <td>{{ tour.hotel.country.climate_winter }}</td>
+                <td>{{ tour.price }} BYN</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('salesChart');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Mean Sale', 'Median Sale'],
+                datasets: [{
+                    label: 'Financial Indicators (BYN)',
+                    data: [{{ sales_stats.mean }}, {{ sales_stats.median }}],
+                    backgroundColor: ['rgba(54, 162, 235, 0.5)', 'rgba(75, 192, 192, 0.5)'],
+                    borderColor: ['rgba(54, 162, 235, 1)', 'rgba(75, 192, 192, 1)'],
+                    borderWidth: 1
+                }]
+            },
+            options: { scales: { y: { beginAtZero: true } } }
+        });
+    </script>
+{% endblock %}

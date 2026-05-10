@@ -1,0 +1,13 @@
+{% extends 'agency/base.html' %}
+{% block title %}Add Review{% endblock %}
+
+{% block content %}
+    <h2>Write a Review</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit Review</button>
+    </form>
+    <br>
+    <a href="{% url 'agency:reviews' %}">Cancel</a>
+{% endblock %}

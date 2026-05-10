@@ -1,0 +1,18 @@
+{% extends 'agency/base.html' %}
+
+{% block title %}My Profile{% endblock %}
+
+{% block content %}
+    <h2>My Profile Information</h2>
+    <p><strong>Username:</strong> {{ user.username }}</p>
+    <p><strong>First Name:</strong> {{ user.first_name }}</p>
+    <p><strong>Last Name:</strong> {{ user.last_name }}</p>
+    <p><strong>Patronymic:</strong> {{ profile.patronymic|default:"Not specified" }}</p>
+    <p><strong>Role:</strong> {{ profile.get_role_display }}</p>
+    <p><strong>Phone:</strong> {{ profile.phone }}</p>
+    <p><strong>Address:</strong> {{ profile.address }}</p>
+    <p><strong>Birth Date:</strong> {{ profile.birth_date|date:"d/m/Y" }}</p>
+
+    <br>
+    <a href="{% url 'agency:home' %}">Back to Home</a>
+{% endblock %}

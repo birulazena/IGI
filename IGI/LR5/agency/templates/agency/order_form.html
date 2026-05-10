@@ -1,0 +1,19 @@
+{% extends 'agency/base.html' %}
+{% block title %}Book Tour{% endblock %}
+
+{% block content %}
+    <h2>Book Tour: {{ tour.title }}</h2>
+    <p>Hotel: {{ tour.hotel.name }} ({{ tour.hotel.country.name }})</p>
+    <p>Total Price: <strong>{{ tour.price }} BYN</strong></p>
+
+    <fieldset style="width: 300px; padding: 20px;">
+        <legend>Confirm Details</legend>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" style="background-color: green; color: white;">Confirm Booking Request</button>
+            <br><br>
+            <a href="{% url 'agency:tours' %}">Cancel</a>
+        </form>
+    </fieldset>
+{% endblock %}

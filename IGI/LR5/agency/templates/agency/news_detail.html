@@ -1,0 +1,19 @@
+{% extends 'agency/base.html' %}
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+    <h2>{{ article.title }}</h2>
+    <small>Published: {{ article.created_at|date:"d/m/Y" }}</small>
+    <hr>
+
+    {% if article.image_url %}
+        <img src="{{ article.image_url }}" alt="News Image" width="300"><br><br>
+    {% endif %}
+
+    <div>
+        {{ article.content|linebreaks }}
+    </div>
+
+    <br>
+    <a href="{% url 'agency:news_list' %}">Back to News</a>
+{% endblock %}
