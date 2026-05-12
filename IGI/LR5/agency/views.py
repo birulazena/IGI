@@ -176,8 +176,7 @@ class ReviewCreateView(LoginRequiredMixin, BaseContextMixin, CreateView):
     success_url = reverse_lazy('agency:reviews')
 
     def form_valid(self, form):
-        full_name = f"{self.request.user.first_name} {self.request.user.last_name}".strip()
-        form.instance.client_name = full_name or self.request.user.username
+        form.instance.author = self.request.user
         return super().form_valid(form)
 
 class ProfileDetailView(LoginRequiredMixin, BaseContextMixin, TemplateView):
@@ -188,16 +187,24 @@ class ProfileDetailView(LoginRequiredMixin, BaseContextMixin, TemplateView):
         context['profile'] = self.request.user.profile
         return context
 
-class ReviewUpdateView(LoginRequiredMixin, BaseContextMixin, UpdateView):
+class ReviewUpdateView(UserPassesTestMixin, LoginRequiredMixin, BaseContextMixin, UpdateView):
     model = Review
     form_class = ReviewForm
     template_name = 'agency/review_form.html'
     success_url = reverse_lazy('agency:reviews')
 
-class ReviewDeleteView(LoginRequiredMixin, BaseContextMixin, DeleteView):
+    def test_func(self):
+        review = self.get_object()
+        return self.request.user == review.author
+
+class ReviewDeleteView(UserPassesTestMixin, LoginRequiredMixin, BaseContextMixin, DeleteView):
     model = Review
     template_name = 'agency/review_confirm_delete.html'
     success_url = reverse_lazy('agency:reviews')
+
+    def test_func(self):
+        review = self.get_object()
+        return self.request.user == review.author or self.request.user.is_superuser
 
 
 class OrderCreateView(LoginRequiredMixin, ClientRequiredMixin, BaseContextMixin, CreateView):

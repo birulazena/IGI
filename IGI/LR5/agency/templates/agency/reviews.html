@@ -14,10 +14,9 @@
     <ul>
         {% for review in reviews %}
             <li style="margin-bottom: 15px;">
-                <strong>{{ review.client_name }}</strong> - {{ review.rating }}/5 stars<br>
-                <i>{{ review.date_posted|date:"d/m/Y" }}</i><br>
+                <strong>{{ review.author.first_name }} {{ review.author.last_name }}</strong> (@{{ review.author.username }}) - {{ review.rating }}/5 stars<br>                <i>{{ review.date_posted|date:"d/m/Y" }}</i><br>
                 <p>{{ review.text }}</p>
-                {% if user.is_authenticated %}
+                {% if request.user == review.author or request.user.is_superuser %}
                     <a href="{% url 'agency:edit_review' review.id %}">[Edit]</a>
                     <a href="{% url 'agency:delete_review' review.id %}">[Delete]</a>
                 {% endif %}
