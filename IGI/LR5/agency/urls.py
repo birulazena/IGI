@@ -4,10 +4,9 @@ from . import views
 app_name = 'agency'
 
 urlpatterns = [
-    path('', views.HomeView.as_view(), name='home'),
-    path('about/', views.CompanyInfoView.as_view(), name='about'),
-    path('news/', views.NewsListView.as_view(), name='news_list'),
-
+    re_path(r'^$', views.HomeView.as_view(), name='home'),
+    re_path(r'^about/$', views.CompanyInfoView.as_view(), name='about'),
+    re_path(r'^news/$', views.NewsListView.as_view(), name='news_list'),
     re_path(r'^news/(?P<pk>\d+)/$', views.NewsDetailView.as_view(), name='news_detail'),
 
     path('faq/', views.FAQListView.as_view(), name='faq'),
